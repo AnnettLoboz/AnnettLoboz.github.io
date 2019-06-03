@@ -1,0 +1,321 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    min-width: 320px;
+    position: relative;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.conteiner {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    /*position: relative;*/
+}
+
+
+@media (min-width: 1140px) {
+    .conteiner {
+        width: 1140px;
+        padding: 0;
+    }
+}
+
+
+.justify-between{
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+}
+
+.align-centre{
+    display: flex;
+    align-items: center;
+}
+
+.title-2{
+    color: #0d3e60;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+@media (min-width: 1140px) {
+    .title-2 {
+        line-height: 24px;
+        margin-bottom: 35px;
+    }
+}
+
+.checklist{
+    color: #0d3e60;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 36px;
+    margin: 0;
+    padding: 0;
+    padding-top: 15px;
+    margin-bottom: 6px;
+    list-style-type: none;
+}
+
+.checklist li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 47px;
+}
+
+.checklist li:before{
+    display: block;
+    width: 32px;
+    height: 29px;
+    content: "";
+    left: 0;
+    top: 10px;
+    position: absolute;
+    background-image:  url("img/icons/tickbox.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.form{
+
+}
+
+.input{
+    width: 100%;
+    height: 51px;
+    border-radius: 19px;
+    background-color: #fff9df;
+    background-image: linear-gradient(to top, #fff9df 0%, #fffdf4 100%);
+    border: none;
+    /* Style for "Your name" */
+    color: #2e435e;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 5px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    }
+
+@media (min-width: 1140px) {
+    .input {
+        width: 293px;
+    }
+}
+
+
+@media (min-width: 700px) {
+    .input {
+        margin-bottom: 0;
+    }
+}
+
+::-webkit-input-placeholder{
+    color:#2e435e;
+}
+
+::-moz-placeholder{
+    color:#2e435e;
+    opacity: 1;
+}
+:-moz-placeholder{
+    color:#2e435e;
+    opacity: 1;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.checkbox{
+    display: none;
+}
+
+.checkbox-fake{
+    /* Style for "Ellipse 10" */
+    display:inline-block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 2px 2px 0 rgba(14, 15, 33, 0.07);
+    border: 1px solid rgba(194, 194, 194, 0.4);
+    background-color: #ffffff;
+    border-radius: 20px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.checkbox-fake::after{
+    content:"";
+    position: absolute;
+    border-radius: 8px;
+    display: block;
+    background-color: #eb6f38;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: ease-in 0.2s;
+}
+
+.checkbox:checked+.checkbox-fake::after{
+    width: 11px;
+    height: 11px;
+}
+
+.checkbox-description{
+    /* Style for "I accept t" */
+    color: #0d3e60;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    display: inline-block;
+}
+
+.checkbox-description a{
+    /* Text style for "OathJar TO" */
+    font-weight: 700;
+    text-decoration: underline;
+    color: #0d3e60;
+}
+
+.submit{
+    /* Style for "approve in" */
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 30px;
+    border: none;
+    cursor: pointer;
+    margin-right: 27px;
+    width: 216px;
+    height: 52px;
+    border-radius: 20px;
+    background-color: #eb5238;
+    background-image: linear-gradient(to top, #eb5238 0%, #eb6f38 100%);
+    margin-bottom: 20px;
+
+}
+
+
+.submit:hover{
+    background-image: linear-gradient(to top, #eb6f38 0%, #eb5238 100%);
+}
+
+.submit:focus{
+    outline-style: none;
+}
+
+
+@media (min-width: 700px) {
+    .submit {
+        margin-bottom: 0px;
+    }
+}
+
+.form-label{
+    cursor: pointer;
+}
+.form-notice{
+    /* Style for "or go to h" */
+    font-size: 14px;
+    line-height: 24px;
+    color: #0d3e60;
+    font-weight: 400;
+   }
+
+.form-notice a {
+    font-weight: 700;
+    color: #eb5238;
+    text-decoration: underline;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+
+@media (min-width: 700px) {
+    .form-group {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+
+
+.scrollToTop-wrapper{
+     /*left:50%;*/
+    /*transform: translate(-50%, 50%);*/
+    display:none;
+    width: 81px;
+    height: 81px;
+    background-color: rgba(235,82,56, .2);
+    border-radius: 50px;
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    cursor: pointer;
+    transform: rotate(180deg);
+
+}
+
+
+.scrollToTop-icon{
+
+    position: absolute;
+    left: 13px;
+    right: 13px;
+    top: 13px;
+    width:55px;
+    height: 55px;
+    border-radius: 50px;
+    background-color: #eb5238;
+    z-index: 2;
+    background-image:  url("img/icons/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+
+
+
+
+/*@media (min-width: 700px) {*/
+    /*.link-circle {*/
+        /*transform: translate(-50% 20%);*/
+    /*}*/
+/*}*/
+
+/*@media (min-width: 1140px) {*/
+    /*.link-circle {*/
+        /*transform: translate(-50% 0%);*/
+    /*}*/
+/*}*/
+
+
+
+
