@@ -1,0 +1,32 @@
+.social {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 1254px){
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.social.social--header{
+    @media (min-width: 1254px) {
+      flex-direction: column;
+    }
+}
+
+.social__item {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.social--header .social__item{
+  @media (min-width: 1254px) {
+    margin-bottom: 35px;
+    margin-left: 0;
+    margin-right: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
